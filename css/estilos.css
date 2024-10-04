@@ -1,0 +1,194 @@
+/* importar tipografia */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* resetear modelo caja por medio del selector universal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Layaut */
+body {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 56px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+  height: 100vh;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+hr {
+  border: solid 1px rgba(255, 255, 255, 0.1);
+  width: 200px;
+  margin: 0 auto;
+}
+a {
+  font-size: 0.9rem;
+  color: #fff;
+}
+i {
+  font-size: 1.5rem;
+}
+h4 {
+  color: #bdb5b5;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.header {
+  grid-area: header;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #202020;
+  width: 100%;
+  height: 56px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 56px;
+}
+.logo-container a {
+  width: 40px;
+  height: 40px;
+  background-color: #202020;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  display: flex;
+  gap: 6px;
+  height: 100%;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.logo-img {
+  position: relative;
+  width: 30px;
+  height: 25px;
+}
+
+.logo h1 {
+  letter-spacing: -1.5px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 1 685px;
+}
+.search-container form {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.search-container input {
+  height: 40px;
+  width: 100%;
+  background-color: #121212;
+  color: #f2f2f2;
+  padding: 12px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 40px 0 0 40px;
+}
+.search-container form > button {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  background-color: #313131;
+  color: #fff;
+  border: none;
+  border-radius: 0 40px 40px 0;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container form ~ button {
+  border-radius: 50%;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  background-color: #121212;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.profile-container a {
+  width: 40px;
+  height: 40px;
+  background-color: #202020;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-imagen {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.header a:hover,
+.header button:hover {
+  background-color: #313131;
+  transition: 0.8s;
+}
+
+.main {
+  grid-area: main;
+}
+
+.content {
+  grid-area: container;
+}
